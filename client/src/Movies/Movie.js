@@ -30,7 +30,7 @@ const Movie = (props) => {
   if (!movie) {
     return <div>Loading movie information...</div>;
   }
-  const movieItem = MovieList.find(item => item.id === Number(props.match.params.dataID))
+  const movieItem = movie.find(item => item.id === Number(props.match.params.dataID))
   const { title, director, metascore, stars } = movieItem;
   
   return (
